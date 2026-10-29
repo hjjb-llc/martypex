@@ -1,0 +1,48 @@
+name: Crash report
+description: Martypex quit unexpectedly
+title: "[CRASH] "
+labels: ["t:crash", "s:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sending this. If you came here from Martypex, it filled in the version, device, and iOS version below and copied the crash report to your clipboard.
+
+        This issue is public. The report never includes your documents, and Martypex removes file paths before saving it, but read it before you submit. To send it privately, email support@caffeinatedmath.com instead.
+  - type: textarea
+    id: description
+    attributes:
+      label: What were you doing?
+      description: What happened just before Martypex quit? Which document type (Typst or Markdown), which screen, which action?
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: Crash report
+      description: Paste the report Martypex copied. Long-press in this box and choose Paste.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: app_version
+    attributes:
+      label: Martypex version
+      description: Find this in Settings > About.
+      placeholder: "1.0 (1)"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device model
+      placeholder: "e.g. iPhone 17 Pro, iPad Pro 13-inch (M5)"
+    validations:
+      required: true
+  - type: input
+    id: os_version
+    attributes:
+      label: iOS version
+      placeholder: "e.g. iOS 27.0"
+    validations:
+      required: true
